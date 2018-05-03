@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  local-npm-cache:
+    image: verdaccio/verdaccio:latest
+    container_name: local-npm-cache
+    ports:
+      - "4873:4873"
+    volumes:
+        - "./storage:/verdaccio/storage"
+        - "./config.yaml:/verdaccio/conf/config.yaml"

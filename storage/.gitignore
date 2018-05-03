@@ -1,0 +1,2 @@
+# Ensuring that there's an ignored storage directory that can be mounted as a volume
+!.gitignore

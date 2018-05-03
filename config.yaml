@@ -1,0 +1,16 @@
+# Path to storage inside docker container
+storage: /verdaccio/storage
+
+packages:
+  '**':
+    # Allow everyone to read packages
+    access: $all
+
+    # proxy 'npmjs' registry
+    proxy: npmjs
+
+# cache npm
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+    cache: true
